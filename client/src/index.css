@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* Global Styling */
+body {
+  background-color: #ffe4e6; /* peony pink */
+  color: #4b5563; /* neutral text */
+}
+
+/* Buttons */
+button {
+  @apply bg-rose-400 hover:bg-rose-500 text-white px-4 py-2 rounded-full shadow-md transition duration-200;
+}
+
+/* Form Inputs */
+input,
+textarea,
+select {
+  @apply border border-rose-300 rounded-full px-4 py-2 text-sm shadow-sm w-full;
+  transition: all 0.3s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  @apply outline-none border-rose-500 ring-2 ring-rose-200;
+}
+
+/* Labels */
+label {
+  @apply text-sm font-semibold text-rose-600;
+}
+
+/* Ant Design Form Fixes */
+.ant-form-item-label {
+  padding-bottom: 6px !important;
+}
+
+.ant-select-selector {
+  @apply border-rose-300 rounded-full h-10 px-4 py-2 shadow-sm;
+}
+
+.ant-select-selector:hover {
+  @apply border-rose-500;
+}
+
+/* Table Styling */
+table {
+  @apply border border-rose-300 w-full rounded-lg overflow-hidden shadow-sm;
+}
+
+th,
+td {
+  @apply p-3 text-left border-b border-rose-200 text-sm;
+}
+
+/* Card & Boxes */
+.card-pink {
+  @apply bg-white rounded-xl shadow-md p-4 hover:shadow-lg transition;
+}
+
+/* SVG Icon Hover */
+svg {
+  @apply cursor-pointer text-rose-400;
+  transition: transform 0.2s;
+}
+svg:hover {
+  transform: scale(1.1);
+  @apply text-rose-500;
+}
